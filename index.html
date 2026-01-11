@@ -75,7 +75,7 @@
 <nav>
   <ul>
     <li onclick="scrollToId('home')" data-i18n="nav_inicio">Inicio</li>
-    <li onclick="scrollToId('itinerario')" data-i18n="nav_itinerario">Qué haremos</li>
+    <li onclick="scrollToId('itinerario')" data-i18n="nav_itinerario">Itinerario</li>
     <li onclick="scrollToId('ubicacion')" data-i18n="nav_ubicacion">Ubicación</li>
     <li onclick="scrollToId('rsvp')" data-i18n="nav_asistencia">Asistencia</li>
     <li onclick="scrollToId('regalo')" data-i18n="nav_regalo">Regalo</li>
@@ -105,15 +105,158 @@
 
 <section id="bienvenida">
   <div class="welcome-text">
-    <p data-i18n="bienvenida_texto">“Algunas historias empiezan muy lejos de casa…</p>
+    <p data-i18n="bienvenida_texto">
+      “Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015, cuando dos caminos —Italia y España— se cruzaron casi sin saber que no volverían a separarse. Después llegaron los viajes, las risas, las decisiones compartidas y las ganas de seguir avanzando juntos. Si estás aquí es porque formas parte de ese camino y ocupas un lugar muy especial en nuestras vidas. Por eso nos hace tanta ilusión que nos acompañes en uno de los días más importantes para nosotros.”
+    </p>
   </div>
 </section>
 
 <div class="separator"><i class="fa-solid fa-diamond"></i></div>
 
 <section id="itinerario">
-  <h2 data-i18n="itinerario">Qué haremos</h2>
+  <h2 data-i18n="itinerario">Itinerario</h2>
   <div class="timeline-card">
     <div class="timeline-item">
       <div class="tl-icon-container tl-preboda"><img src="IMG/cheers.png"></div>
-      <div class="tl-content"><span cl
+      <div class="tl-content"><span class="tl-time">31 JUL · 20:30</span><p class="tl-title" data-i18n="preboda">Preboda</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon-container"><img src="IMG/autobus.png"></div>
+      <div class="tl-content"><span class="tl-time">01 AGO · 12:00</span><p class="tl-title" data-i18n="bus_ida">Bus desde Santander</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon-container"><img src="IMG/marriage.png"></div>
+      <div class="tl-content"><span class="tl-time">12:30</span><p class="tl-title" data-i18n="ceremonia">Ceremonia</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon-container"><img src="IMG/cheers.png"></div>
+      <div class="tl-content"><span class="tl-time">13:30</span><p class="tl-title" data-i18n="cocktail">Cóctel de bienvenida</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon-container"><img src="IMG/banquet.png"></div>
+      <div class="tl-content"><span class="tl-time">14:30</span><p class="tl-title" data-i18n="banquete">Banquete nupcial</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon-container"><img src="IMG/disco-ball.png"></div>
+      <div class="tl-content"><span class="tl-time">19:00</span><p class="tl-title" data-i18n="baile">Baile y barra libre</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon-container"><img src="IMG/autobus-vuelta.PNG"></div>
+      <div class="tl-content"><span class="tl-time">23:30</span><p class="tl-title" data-i18n="bus_vuelta">Bus de vuelta</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="separator"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="ubicacion">
+  <h2 data-i18n="ubicacion_titulo">Ubicación</h2>
+  <div style="text-align: center;">
+    <p><strong>Restaurante El Nuevo Molino</strong></p>
+    <p style="font-size: 0.9rem; margin-top: 0;">Bo. Monseñor, 18, Puente Arce, Cantabria</p>
+    
+    <div class="map-container" style="background: none; border: none;">
+      <img src="IMG/mapa.png" alt="Mapa Ubicación" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+    </div>
+
+    <a href="https://maps.app.goo.gl/SnForcFxCoaXHaLf7" target="_blank" class="btn-main" data-i18n="como_llegar">Cómo llegar</a>
+    
+    <br>
+    
+    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Claudia+%26+Alberto+%F0%9F%92%95&dates=20260801T103000Z/20260801T223000Z&details=Boda+de+Claudia+%26+Alberto.+Recordatorio%3A+%C2%A1Falta+solo+un+mes%21&location=Restaurante+El+Nuevo+Molino,+Cantabria&sf=true&output=xml" 
+       target="_blank" class="btn-main btn-outline">
+      <i class="fa-regular fa-calendar-plus"></i> <span data-i18n="add_calendar">Añadir al Calendario</span>
+    </a>
+  </div>
+</section>
+
+<div class="separator"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="rsvp">
+  <div style="text-align: center;">
+    <h2 data-i18n="confirmar">¿Nos acompañas?</h2>
+    <p data-i18n="rsvp_p" style="font-size: 0.95rem;">Confirma antes del 1 de junio de 2026.</p>
+    <a href="https://forms.gle/2uurApQkp68dGx13A" target="_blank" class="btn-main" data-i18n="confirm_btn">Confirmar Asistencia</a>
+  </div>
+</section>
+
+<div class="separator"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="regalo">
+  <h2 data-i18n="regalo_titulo">Un detalle</h2>
+  <div class="timeline-card" style="text-align: center; padding: 25px;">
+    <i class="fa-solid fa-heart" style="font-size: 1.5rem; color: var(--dorado); margin-bottom: 10px;"></i>
+    <p data-i18n="regalo_texto" style="font-size: 1rem; font-style: italic; line-height: 1.6;">
+      Vuestra presencia en nuestro gran día es el mayor regalo que podríamos recibir. Sin embargo, si deseáis colaborar con nuestra nueva etapa y nuestro viaje de novios, os dejamos aquí cómo hacerlo.
+    </p>
+
+    <div class="iban-box">
+      <strong>TEAM CLAUDIA:</strong> <span id="ibanClaudia">IT47T0306912117100000062232</span>
+      <button class="btn-copy" onclick="copyIban('ibanClaudia')" id="copyClaudia" data-i18n="copiar">Copiar IBAN</button>
+    </div>
+
+    <div class="iban-box" style="margin-top: 12px;">
+      <strong>TEAM ALBERTO:</strong> <span id="ibanAlberto">ES77 0049 5525 5323 1275 4403</span>
+      <button class="btn-copy" onclick="copyIban('ibanAlberto')" id="copyAlberto" data-i18n="copiar">Copiar IBAN</button>
+    </div>
+  </div>
+</section>
+
+<footer><p data-i18n="footer_text">© 2026 Claudia & Alberto · Hecho con ❤️</p></footer>
+
+<script>
+const translations = {
+  es: { 
+    nav_inicio: "Inicio", nav_itinerario: "Itinerario", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Información", nav_ubicacion: "Ubicación",
+    hero_date: "01 . 08 . 2026", nos_casamos: "¡Nos casamos!", itinerario: "Itinerario",
+    preboda: "Preboda", bus_ida: "Bus desde Santander", ceremonia: "Ceremonia", cocktail: "Cóctel de bienvenida", banquete: "Banquete nupcial", baile: "Baile y barra libre", bus_vuelta: "Bus de vuelta",
+    ubicacion_titulo: "Ubicación", como_llegar: "Cómo llegar", add_calendar: "Añadir al Calendario",
+    regalo_titulo: "Un detalle", regalo_texto: "Vuestra presencia en nuestro gran día es el mayor regalo que podríamos recibir. Sin embargo, si deseáis colaborar con nuestra nueva etapa y nuestro viaje de novios, os dejamos aquí cómo hacerlo.",
+    confirmar: "¿Nos acompañas?", rsvp_p: "Confirma antes del 1 de junio de 2026.", confirm_btn: "Confirmar Asistencia", copiar: "Copiar IBAN", copiado: "¡Copiado!",
+    time: ["Días","Hrs","Min","Seg"], footer_text: "© 2026 Claudia & Alberto · Hecho con ❤️",
+    bienvenida_texto: "“Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015, cuando dos caminos —Italia y España— se cruzaron casi sin saber que no volverían a separarse. Después llegaron los viajes, las risas, las decisiones compartidas y las ganas de seguir avanzando juntos. Si estás aquí es porque formas parte de ese camino y ocupas un lugar muy especial en nuestras vidas. Por eso nos hace tanta ilusión que nos acompañes en uno de los días más importantes para nosotros.”"
+  },
+  it: { 
+    nav_inicio: "Inizio", nav_itinerario: "Programma", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Info", nav_ubicacion: "Ubicazione",
+    hero_date: "01 . 08 . 2026", nos_casamos: "Ci sposiamo!", itinerario: "Programma", 
+    preboda: "Pre-matrimonio", bus_ida: "Navetta da Santander", ceremonia: "Cerimonia", cocktail: "Aperitivo", banquete: "Banchetto", baile: "Festa", bus_vuelta: "Navetta di ritorno",
+    ubicacion_titulo: "Ubicazione", como_llegar: "Come arrivare", add_calendar: "Aggiungi al calendario",
+    regalo_titulo: "Un pensiero", regalo_texto: "La vostra presenza nel nostro grande giorno è il regalo più bello che potremmo ricevere. Tuttavia, se desiderate contribuire alla nostra nuova vita insieme e al nostro viaggio di nozze, ecco come potete fare.",
+    confirmar: "Ci sarai?", rsvp_p: "Conferma entro il 1° giugno 2026.", confirm_btn: "Conferma Partecipazione", copiar: "Copia IBAN", copiado: "Copiato!",
+    time: ["Giorni","Ore","Min","Sec"], footer_text: "© 2026 Claudia & Alberto · Fatto con ❤️",
+    bienvenida_texto: "Alcune storie iniziano molto lontano da casa. La nostra è iniziata in Grecia, nel 2015, quando due strade – l'Italia e la Spagna – si sono incrociate quasi senza sapere che non si sarebbero più separate. Poi sono arrivati i viaggi, le risate, le decisioni condivise e il desiderio di continuare a camminare insieme. Se sei qui è perché fai parte di questo cammino e occupi un posto molto speciale nelle nostre vite. Per questo siamo immensamente felici che tu ci accompagni in uno dei giorni più importanti per noi."
+  }
+};
+
+let currentLang = 'es';
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  updateCountdown();
+}
+function irATurismo() { window.location.href = currentLang === 'it' ? 'turismo-it.html' : 'turismo-es.html'; }
+function copyIban(ibanId) {
+  const text = document.getElementById(ibanId).innerText;
+  navigator.clipboard.writeText(text);
+  const btn = document.getElementById('copy' + (ibanId === 'ibanClaudia' ? 'Claudia' : 'Alberto'));
+  btn.innerText = translations[currentLang].copiado;
+  setTimeout(() => { btn.innerText = translations[currentLang].copiar; }, 2000);
+}
+function scrollToId(id) { window.scrollTo({ top: document.getElementById(id).offsetTop - 60, behavior: "smooth" }); }
+function updateCountdown() {
+  const target = new Date("2026-08-01T12:30:00");
+  const diff = target - new Date();
+  const el = document.getElementById("countdown");
+  if (diff <= 0) { el.innerHTML = "<h3>¡Es hoy! 🎉</h3>"; return; }
+  const d = Math.floor(diff/86400000), h = Math.floor((diff%86400000)/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
+  const t = translations[currentLang].time;
+  el.innerHTML = `<div class="box"><span>${d}</span><small>${t[0]}</small></div><div class="box"><span>${h}</span><small>${t[1]}</small></div><div class="box"><span>${m}</span><small>${t[2]}</small></div><div class="box"><span>${s}</span><small>${t[3]}</small></div>`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+</body>
+</html>
