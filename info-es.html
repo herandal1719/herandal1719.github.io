@@ -15,7 +15,7 @@
     }
 
     * { box-sizing: border-box; scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Lato', sans-serif; background: var(--blanco); color: var(--gris); line-height: 1.5; overflow-x: hidden; }
+    body { margin: 0; font-family: 'Lato', sans-serif; background: var(--blanco); color: var(--gris); line-height: 1.6; overflow-x: hidden; }
 
     /* --- NAVEGACIÓN RESPONSIVE --- */
     nav { 
@@ -82,9 +82,16 @@
     }
 
     /* --- CABECERA --- */
-    .header-turismo { padding: 120px 20px 40px; text-align: center; background: white; }
-    h1, h2 { font-family: 'Playfair Display', serif; color: var(--negro-suave); text-align: center; margin-bottom: 10px; }
-    p.subtitle { font-size: 1.1rem; color: var(--gris); font-style: italic; }
+    .header-turismo { padding: 120px 20px 60px; text-align: center; background: white; }
+    h1, h2 { font-family: 'Playfair Display', serif; color: var(--negro-suave); text-align: center; margin-bottom: 15px; }
+    .intro-text { 
+      max-width: 700px; 
+      margin: 0 auto; 
+      font-size: 1.1rem; 
+      color: var(--gris); 
+      font-style: italic; 
+      line-height: 1.8;
+    }
     
     /* --- GRID Y CARDS --- */
     section { padding: 40px 20px; max-width: 1100px; margin: auto; }
@@ -141,12 +148,14 @@
     <li><a href="index.html#regalo">Regalo</a></li>
     <li class="active"><a href="#">Información</a></li>
   </ul>
-  <div style="min-width: 40px;" class="desktop-only"></div>
+  <div style="min-width: 40px;"></div>
 </nav>
 
 <header class="header-turismo">
   <h1>Información adicional</h1>
-  <p class="subtitle">Recomendaciones para disfrutar Cantabria al máximo</p>
+  <p class="intro-text">
+    Agradecemos de corazón que vengáis a nuestra boda. Si aún no conocéis Santander y sus alrededores, os dejamos aquí algunos de los sitios que no podéis perderos.
+  </p>
 </header>
 
 <section id="santander">
