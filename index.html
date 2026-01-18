@@ -48,7 +48,7 @@
       padding: 0; 
       margin: 0; 
       flex: 1; 
-      justify-content: center; /* CENTRADO EN PC */
+      justify-content: center;
     }
 
     nav li { 
@@ -171,7 +171,7 @@
   
   <ul id="nav-links">
     <li onclick="scrollToId('home')" data-i18n="nav_inicio">Inicio</li>
-    <li onclick="scrollToId('itinerario')" data-i18n="nav_itinerario">Qué haremos</li>
+    <li onclick="scrollToId('planning')" data-i18n="nav_planning">Planning</li>
     <li onclick="scrollToId('ubicacion')" data-i18n="nav_ubicacion">Ubicación</li>
     <li onclick="scrollToId('rsvp')" data-i18n="nav_asistencia">Asistencia</li>
     <li onclick="scrollToId('regalo')" data-i18n="nav_regalo">Regalo</li>
@@ -205,22 +205,22 @@
 <section id="bienvenida">
   <div class="welcome-text">
     <p data-i18n="bienvenida_texto">
-      “Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015, cuando dos caminos —Italia y España— se cruzaron casi sin saber que no volverían a separarse...”
+      “Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015...”
     </p>
   </div>
 </section>
 
 <div class="separator"><i class="fa-solid fa-diamond"></i></div>
 
-<section id="itinerario">
-  <h2 data-i18n="itinerario">Qué haremos</h2>
+<section id="planning">
+  <h2 data-i18n="planning_titulo">Planning</h2>
   <div class="timeline-card">
     <div class="timeline-item">
       <div class="tl-icon-container" style="background:var(--dorado)"><img src="IMG/cheers.png" style="filter:brightness(0) invert(1)"></div>
       <div class="tl-content">
         <span class="tl-time">31 JUL · 20:30</span>
         <p class="tl-title" data-i18n="preboda">Preboda</p>
-        <small class="tl-desc" data-i18n="preboda_loc">Centro de Santander (Lugar por confirmar)</small>
+        <small class="tl-desc" data-i18n="preboda_loc">Centro de Santander (Aún por decidir sitio y hora)</small>
       </div>
     </div>
     <div class="timeline-item">
@@ -320,8 +320,8 @@ function irATurismo() {
 
 const translations = {
   es: { 
-    nav_inicio: "Inicio", nav_itinerario: "Itinerario", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Información", nav_ubicacion: "Ubicación",
-    nos_casamos: "¡Nos casamos!", itinerario: "Qué haremos", 
+    nav_inicio: "Inicio", nav_planning: "Planning", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Información", nav_ubicacion: "Ubicación",
+    nos_casamos: "¡Nos casamos!", planning_titulo: "Planning", 
     preboda: "Preboda", preboda_loc: "Centro de Santander (Aún por decidir sitio y hora)",
     bus_ida: "Bus desde Santander", 
     ceremonia: "Ceremonia", ceremonia_loc: "Restaurante El Nuevo Molino, Puente Arce",
@@ -333,8 +333,8 @@ const translations = {
     bienvenida_texto: "“Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015...”"
   },
   it: { 
-    nav_inicio: "Inizio", nav_itinerario: "Programma", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Info", nav_ubicacion: "Ubicazione",
-    nos_casamos: "Ci sposiamo!", itinerario: "Cosa faremo", 
+    nav_inicio: "Inizio", nav_planning: "Programma", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Info", nav_ubicacion: "Ubicazione",
+    nos_casamos: "Ci sposiamo!", planning_titulo: "Programma", 
     preboda: "Festa pre-matrimonio", preboda_loc: "Centro di Santander (Luogo e ora da definire)",
     bus_ida: "Navetta da Santander", 
     ceremonia: "Cerimonia", ceremonia_loc: "Restaurante El Nuevo Molino, Puente Arce",
