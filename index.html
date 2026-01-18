@@ -150,7 +150,7 @@
     .tl-desc { font-size: 0.8rem; color: #888; display: block; margin-top: 2px; }
 
     section { padding: 10px 20px; max-width: 800px; margin: auto; }
-    .welcome-text { text-align: center; font-style: italic; font-size: 1rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .welcome-text { text-align: center; font-style: italic; font-size: 1rem; max-width: 600px; margin: 0 auto; line-height: 1.6; color: var(--gris); }
 
     .map-container { margin: 12px auto; border-radius: 12px; overflow: hidden; height: 250px; width: 100%; max-width: 480px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     .btn-main { background: var(--dorado); color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 5px; font-size: 0.85rem; border: none; cursor: pointer; transition: 0.3s; }
@@ -170,7 +170,7 @@
   </div>
   
   <ul id="nav-links">
-    <li onclick="scrollToId('home')" data-i18n="nav_inicio">Inicio</li>
+    <li onclick="scrollToId('home')" data-i18n="nav_inicio">¡¡¡Bienvenidos!!!</li>
     <li onclick="scrollToId('planning')" data-i18n="nav_planning">Planning</li>
     <li onclick="scrollToId('ubicacion')" data-i18n="nav_ubicacion">Ubicación</li>
     <li onclick="scrollToId('rsvp')" data-i18n="nav_asistencia">Asistencia</li>
@@ -205,7 +205,9 @@
 <section id="bienvenida">
   <div class="welcome-text">
     <p data-i18n="bienvenida_texto">
-      “Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015...”
+      Después de 10 años juntos (sí le ha costado decidirse a Alberto :) ) hemos decidido dar el gran paso y juntar nuestras vidas el día 1 de Agosto en el restaurante Nuevo Molino de Puente Arce a 10 - 15 minutos de Santander. <br><br>
+      Deseamos que compartáis este gran día con nosotros para ello esperamos que el día sea lo más especial posible. No te lo pierdas!!! Hasta que llegue el día, hemos creado esta página para que estéis al tanto de los detalles de la boda, algunos horarios estamos definiendolos aún, lo iremos actualizando en la página. <br><br>
+      Recuerda pasarte por la sección Asistencia para confirmar que vienes!!!
     </p>
   </div>
 </section>
@@ -269,7 +271,7 @@
       <img src="IMG/mapa.png" alt="Mapa" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
 
-    <a href="https://www.google.com/maps/dir/?api=1&destination=Restaurante+El+Nuevo+Molino+Puente+Arce" target="_blank" class="btn-main" data-i18n="como_llegar">Cómo llegar</a>
+    <a href="https://maps.app.goo.gl/3q2eN99V5uS5P7P1A" target="_blank" class="btn-main" data-i18n="como_llegar">Cómo llegar</a>
     <br>
     <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Claudia+%26+Alberto&dates=20260801T103000Z/20260801T223000Z&location=Restaurante+El+Nuevo+Molino" target="_blank" class="btn-main btn-outline">
       <i class="fa-regular fa-calendar-plus"></i> <span data-i18n="add_calendar">Añadir al Calendario</span>
@@ -330,10 +332,10 @@ const translations = {
     regalo_titulo: "Un detalle", regalo_texto: "Vuestra presencia es nuestro mayor regalo. Si deseáis colaborar con nuestra nueva etapa, os dejamos aquí cómo hacerlo.",
     confirmar: "¿Nos acompañas?", rsvp_p: "Confirma antes del 1 de junio de 2026.", confirm_btn: "Confirmar Asistencia", copiar: "Copiar IBAN", copiado: "¡Copiado!",
     time: ["Días","Hrs","Min","Seg"], footer_text: "© 2026 Claudia & Alberto · Hecho con ❤️",
-    bienvenida_texto: "“Algunas historias empiezan muy lejos de casa. La nuestra comenzó en Grecia, en 2015...”"
+    bienvenida_texto: "Después de 10 años juntos (sí le ha costado decidirse a Alberto :) ) hemos decidido dar el gran paso y juntar nuestras vidas el día 1 de Agosto en el restaurante Nuevo Molino de Puente Arce a 10 - 15 minutos de Santander. <br><br> Deseamos que compartáis este gran día con nosotros para ello esperamos que el día sea lo más especial posible. No te lo pierdas!!! Hasta que llegue el día, hemos creado esta página para que estéis al tanto de los detalles de la boda, algunos horarios estamos definiendolos aún, lo iremos actualizando en la página. <br><br> Recuerda pasarte por la sección Asistencia para confirmar que vienes!!!"
   },
   it: { 
-    nav_inicio: "Inizio", nav_planning: "Programma", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Info", nav_ubicacion: "Ubicazione",
+    nav_inicio: "Benvenuti!!!", nav_planning: "Programma", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Info", nav_ubicacion: "Ubicazione",
     nos_casamos: "Ci sposiamo!", planning_titulo: "Programma", 
     preboda: "Festa pre-matrimonio", preboda_loc: "Sito e luogo da definire",
     bus_ida: "Navetta da Santander", 
@@ -343,7 +345,7 @@ const translations = {
     regalo_titulo: "Un pensiero", regalo_texto: "La vostra presenza è il regalo più bello. Se desiderate contribuire alla nostra nuova vita, ecco come fare.",
     confirmar: "Ci sarai?", rsvp_p: "Conferma entro il 1° giugno 2026.", confirm_btn: "Conferma Partecipazione", copiar: "Copia IBAN", copiado: "Copiato!",
     time: ["Giorni","Ore","Min","Sec"], footer_text: "© 2026 Claudia & Alberto · Fatto con ❤️",
-    bienvenida_texto: "Alcune storie iniziano molto lontano da casa. La nostra è iniziata in Grecia, nel 2015..."
+    bienvenida_texto: "Dopo 10 anni insieme (sì, Alberto ci ha messo un po' a decidersi :) ) abbiamo deciso di fare il grande passo e unire le nostre vite il 1° agosto presso il ristorante Nuevo Molino di Puente Arce, a 10-15 minuti da Santander. <br><br> Desideriamo condividere questo grande giorno con voi e speriamo che sia il più speciale possibile. Non mancate!!! Fino a quel momento, abbiamo creato questa pagina per tenervi aggiornati sui dettagli del matrimonio; stiamo ancora definendo alcuni orari e aggiorneremo la pagina man mano. <br><br> Ricordatevi di passare dalla sezione RSVP per confermare la vostra presenza!!!"
   }
 };
 
@@ -352,7 +354,13 @@ function setLang(lang) {
   currentLang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) el.textContent = translations[lang][key];
+    if (translations[lang][key]) {
+        if (key === 'bienvenida_texto') {
+            el.innerHTML = translations[lang][key];
+        } else {
+            el.textContent = translations[lang][key];
+        }
+    }
   });
   updateCountdown();
 }
