@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -7,129 +8,378 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root { --blanco: #FFF8F0; --dorado: #E8C39A; --gris: #555; --negro-suave: #333; }
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Lato', sans-serif; background: var(--blanco); color: var(--gris); line-height: 1.6; overflow-x: hidden; }
+    :root {
+      --blanco: #FFF8F0;
+      --dorado: #E8C39A;
+      --gris: #555;
+      --negro-suave: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: var(--blanco);
+      color: var(--gris);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
     /* --- NAVEGACIÓN --- */
-    nav { position: fixed; top: 0; width: 100%; background: rgba(255,248,240,0.98); border-bottom: 1px solid rgba(0,0,0,0.05); z-index: 1000; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; }
-    .menu-toggle { display: none; font-size: 1.5rem; color: var(--dorado); cursor: pointer; }
-    nav ul { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; flex: 1; justify-content: center; }
-    nav li { font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-    nav a { text-decoration: none; color: var(--negro-suave); transition: 0.3s; }
-    nav a:hover, nav li.active a { color: var(--dorado); }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 248, 240, 0.98);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: var(--dorado);
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    nav li {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--negro-suave);
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav li.active a {
+      color: var(--dorado);
+    }
+
     @media (max-width: 850px) {
-      .menu-toggle { display: block; }
-      nav ul { position: fixed; top: 60px; right: -100%; background: var(--blanco); width: 75%; height: calc(100vh - 60px); flex-direction: column; padding-top: 40px; gap: 25px; transition: 0.4s ease; box-shadow: -5px 0 15px rgba(0,0,0,0.05); }
-      nav ul.active { right: 0; }
-      nav li { font-size: 16px; }
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background: var(--blanco);
+        width: 75%;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        padding-top: 40px;
+        gap: 25px;
+        transition: 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+      }
+
+      nav ul.active {
+        right: 0;
+      }
+
+      nav li {
+        font-size: 16px;
+      }
     }
 
     /* --- CONTENIDO --- */
-    .header-turismo { padding: 120px 20px 60px; text-align: center; background: white; }
-    h1, h2 { font-family: 'Playfair Display', serif; color: var(--negro-suave); text-align: center; margin-bottom: 15px; }
-    .intro-text { max-width: 750px; margin: 0 auto; font-size: 1.1rem; color: var(--gris); font-style: italic; line-height: 1.8; }
-    
-    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
-    .grid-turismo { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-    .card-turismo { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-bottom: 3px solid transparent; }
-    .card-turismo:hover { transform: translateY(-5px); border-bottom: 3px solid var(--dorado); }
-    .card-turismo img { width: 100%; height: 220px; object-fit: cover; }
-    .info-turismo { padding: 20px; text-align: center; }
-    .info-turismo h4 { margin: 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--negro-suave); }
-    
-    .gastronomia-list { list-style: none; padding: 0; text-align: left; font-size: 0.85rem; margin-top: 15px; }
-    .gastronomia-list li { margin-bottom: 12px; border-bottom: 1px solid #f9f9f9; padding-bottom: 8px; }
-    .gastronomia-list a { color: var(--negro-suave); text-decoration: none; font-weight: bold; }
-    .gastronomia-list span { display: block; color: #999; font-size: 0.75rem; font-weight: normal; margin-top: 3px; }
+    .header-turismo {
+      padding: 120px 20px 60px;
+      text-align: center;
+      background: white;
+    }
 
-    .btn-back { display: inline-block; padding: 12px 35px; background: var(--dorado); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(232, 195, 154, 0.3); }
-    footer { text-align: center; padding: 30px; background: #fff; font-size: 0.75rem; border-top: 1px solid #eee; margin-top: 40px; }
+    h1,
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--negro-suave);
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .intro-text {
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: var(--gris);
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid-turismo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card-turismo {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    .card-turismo:hover {
+      transform: translateY(-5px);
+      border-bottom: 3px solid var(--dorado);
+    }
+
+    .card-turismo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .info-turismo {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .info-turismo h4 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--negro-suave);
+    }
+
+    .gastronomia-list {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      font-size: 0.85rem;
+      margin-top: 15px;
+    }
+
+    .gastronomia-list li {
+      margin-bottom: 12px;
+      border-bottom: 1px solid #f9f9f9;
+      padding-bottom: 8px;
+    }
+
+    .gastronomia-list a {
+      color: var(--negro-suave);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .gastronomia-list span {
+      display: block;
+      color: #999;
+      font-size: 0.75rem;
+      font-weight: normal;
+      margin-top: 3px;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 12px 35px;
+      background: var(--dorado);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(232, 195, 154, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #fff;
+      font-size: 0.75rem;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    /* Estilo para el mapa de alojamiento */
+    .map-container {
+      text-align: center;
+      margin: 30px auto;
+      max-width: 900px;
+    }
+
+    .map-container img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
-  <ul id="nav-links">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="index.html#planning">Planning</a></li>
-    <li><a href="index.html#ubicacion">Ubicación</a></li>
-    <li><a href="index.html#rsvp">Asistencia</a></li>
-    <li><a href="index.html#regalo">Regalo</a></li>
-    <li class="active"><a href="#">Información</a></li>
-  </ul>
-</nav>
+  <nav>
+    <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#planning">Planning</a></li>
+      <li><a href="index.html#ubicacion">Ubicación</a></li>
+      <li><a href="index.html#rsvp">Asistencia</a></li>
+      <li><a href="index.html#regalo">Regalo</a></li>
+      <li class="active"><a href="#">Información</a></li>
+    </ul>
+  </nav>
 
-<header class="header-turismo">
-  <h1>Información adicional</h1>
-  <p class="intro-text">Agradecemos de corazón que vengáis a nuestra boda. Además, si queréis aprovechar para alargar vuestros días en Santander, os hemos dejado aquí algunos sitios que no podéis perderos.</p>
-</header>
+  <header class="header-turismo">
+    <h1>Información adicional</h1>
+    <p class="intro-text">Agradecemos de corazón que vengáis a nuestra boda. Además, si queréis aprovechar para alargar vuestros días en Santander, os hemos dejado aquí algunos sitios que no podéis perderos.</p>
+  </header>
 
-<section id="santander">
-  <h2>Qué ver en Santander</h2>
-  <div class="grid-turismo">
-    <div class="card-turismo"><img src="IMG/faro.jpg"><div class="info-turismo"><h4>Faro Cabo Mayor</h4></div></div>
-    <div class="card-turismo"><img src="IMG/sardinero.jpg"><div class="info-turismo"><h4>El Sardinero</h4></div></div>
-    <div class="card-turismo"><img src="IMG/magdalena.jpg"><div class="info-turismo"><h4>La Magdalena</h4></div></div>
-  </div>
-</section>
-
-<section id="cantabria" style="background: rgba(232, 195, 154, 0.08); width: 100%; padding: 60px 0;">
-  <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-    <h2>Qué ver en Cantabria</h2>
+  <section id="alojamiento">
+    <h2>Dónde alojarse</h2>
+    <p class="intro-text" style="font-style: normal; text-align: center; margin-bottom: 20px;">
+      Santander ofrece distintas zonas ideales según lo que busquéis: playa, centro o tranquilidad. 
+      <strong>Os hemos sombreado en gris las zonas donde buscar alojamiento</strong> para que estéis bien ubicados.
+    </p>
+    <div class="map-container">
+      <img src="IMG/santander.png" alt="Zonas recomendadas en Santander">
+    </div>
+    
     <div class="grid-turismo">
-      <div class="card-turismo"><img src="IMG/santillana.jpg"><div class="info-turismo"><h4>Santillana del Mar</h4></div></div>
-      <div class="card-turismo"><img src="IMG/comillas.jpg"><div class="info-turismo"><h4>Comillas</h4></div></div>
-      <div class="card-turismo"><img src="IMG/potes.jpg"><div class="info-turismo"><h4>Potes</h4></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="gastronomia">
-  <h2>Dónde comer en Santander</h2>
-  <div class="grid-turismo">
-    <div class="card-turismo">
-      <div class="info-turismo">
-        <i class="fa-solid fa-utensils" style="color:var(--dorado); font-size:1.5rem;"></i>
-        <h4>Pinchos y Tapas</h4>
-        <ul class="gastronomia-list">
-          <li><a href="https://maps.google.com/?cid=760922728592504859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Restaurante El Sol</a><span>Imprescindibles sus patatas coreanas.</span></li>
-          <li><a href="https://maps.google.com/?cid=5388568460755270112&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Mercado del Este</a><span>Puestos gourmet en edificio histórico.</span></li>
-          <li><a href="https://maps.google.com/?cid=6905586871996679817&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Casa Lita</a><span>Pinchos de autor junto a la bahía.</span></li>
-        </ul>
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-city" style="color:var(--dorado); font-size:1.5rem; margin-bottom:10px;"></i>
+          <h4>Centro Ciudad</h4>
+          <p style="font-size:0.9rem;">Ideal para moveros a pie, estar cerca de restaurantes y tiendas, y vivir el ambiente de la ciudad.</p>
+        </div>
+      </div>
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-umbrella-beach" style="color:var(--dorado); font-size:1.5rem; margin-bottom:10px;"></i>
+          <h4>El Sardinero</h4>
+          <p style="font-size:0.9rem;">Zona elegante frente al mar, perfecta para quienes buscan playa y paseos icónicos.</p>
+        </div>
       </div>
     </div>
-    <div class="card-turismo">
-      <div class="info-turismo">
-        <i class="fa-solid fa-fish" style="color:var(--dorado); font-size:1.5rem;"></i>
-        <h4>Pescado y Marisco</h4>
-        <ul class="gastronomia-list">
-          <li><a href="https://maps.google.com/?cid=1957432635480328724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> La Nueva Gaviota</a><span>Tradición marinera.</span></li>
-          <li><a href="https://maps.google.com/?cid=907110373340264490&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> La Radio</a><span>Especialistas en las mejores rabas.</span></li>
-          <li><a href="https://www.restaurantemulata.es/" target="_blank"><i class="fa-solid fa-location-dot"></i> La Mulata</a><span>Ambiente moderno y marisco excelente.</span></li>
-        </ul>
+  </section>
+
+  <section id="santander">
+    <h2>Qué ver en Santander</h2>
+    <div class="grid-turismo">
+      <div class="card-turismo"><img src="IMG/faro.jpg">
+        <div class="info-turismo">
+          <h4>Faro Cabo Mayor</h4>
+        </div>
+      </div>
+      <div class="card-turismo"><img src="IMG/sardinero.jpg">
+        <div class="info-turismo">
+          <h4>El Sardinero</h4>
+        </div>
+      </div>
+      <div class="card-turismo"><img src="IMG/magdalena.jpg">
+        <div class="info-turismo">
+          <h4>La Magdalena</h4>
+        </div>
       </div>
     </div>
-    <div class="card-turismo">
-      <div class="info-turismo">
-        <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--dorado); font-size:1.5rem;"></i>
-        <h4>Lugares con encanto</h4>
-        <ul class="gastronomia-list">
-          <li><a href="https://maps.google.com/?cid=6693881173641100442&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Bodega del Riojano</a><span>Famoso por su pinacoteca en barricas.</span></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Las+Olas+Monte+Cantabria&query_place_id=ChIJ1w-ZnWBJSQ0RKLr1d3QtPw4" target="_blank"><i class="fa-solid fa-location-dot"></i> Restaurante Las Olas</a><span>Vistas al mar y cocina excepcional en un entorno único.</span></li>
-          <li><a href="https://maps.google.com/?cid=1822318887932121214&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Bodega La Conveniente</a><span>Ambiente único y música en directo.</span></li>
-        </ul>
+  </section>
+
+  <section id="cantabria" style="background: rgba(232, 195, 154, 0.08); width: 100%; padding: 60px 0;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+      <h2>Qué ver en Cantabria</h2>
+      <div class="grid-turismo">
+        <div class="card-turismo"><img src="IMG/santillana.jpg">
+          <div class="info-turismo">
+            <h4>Santillana del Mar</h4>
+          </div>
+        </div>
+        <div class="card-turismo"><img src="IMG/comillas.jpg">
+          <div class="info-turismo">
+            <h4>Comillas</h4>
+          </div>
+        </div>
+        <div class="card-turismo"><img src="IMG/potes.jpg">
+          <div class="info-turismo">
+            <h4>Potes</h4>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div style="text-align: center; padding: 40px 0;"><a href="index.html" class="btn-back">← Volver a la Invitación</a></div>
-<footer><p>© 2026 Claudia & Alberto · Hecho con ❤️</p></footer>
+  <section id="gastronomia">
+    <h2>Dónde comer en Santander</h2>
+    <div class="grid-turismo">
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-utensils" style="color:var(--dorado); font-size:1.5rem;"></i>
+          <h4>Pinchos y Tapas</h4>
+          <ul class="gastronomia-list">
+            <li><a href="https://maps.google.com/?cid=760922728592504859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Restaurante El Sol</a><span>Imprescindibles sus patatas coreanas.</span></li>
+            <li><a href="https://maps.google.com/?cid=5388568460755270112&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Mercado del Este</a><span>Puestos gourmet en edificio histórico.</span></li>
+            <li><a href="https://maps.google.com/?cid=6905586871996679817&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Casa Lita</a><span>Pinchos de autor junto a la bahía.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-fish" style="color:var(--dorado); font-size:1.5rem;"></i>
+          <h4>Pescado y Marisco</h4>
+          <ul class="gastronomia-list">
+            <li><a href="https://maps.google.com/?cid=1957432635480328724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> La Nueva Gaviota</a><span>Tradición marinera.</span></li>
+            <li><a href="https://maps.google.com/?cid=907110373340264490&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> La Radio</a><span>Especialistas en las mejores rabas.</span></li>
+            <li><a href="https://www.restaurantemulata.es/" target="_blank"><i class="fa-solid fa-location-dot"></i> La Mulata</a><span>Ambiente moderno y marisco excelente.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--dorado); font-size:1.5rem;"></i>
+          <h4>Lugares con encanto</h4>
+          <ul class="gastronomia-list">
+            <li><a href="https://maps.google.com/?cid=6693881173641100442&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Bodega del Riojano</a><span>Famoso por su pinacoteca en barricas.</span></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Las+Olas+Monte+Cantabria&query_place_id=ChIJ1w-ZnWBJSQ0RKLr1d3QtPw4" target="_blank"><i class="fa-solid fa-location-dot"></i> Restaurante Las Olas</a><span>Vistas al mar y cocina excepcional.</span></li>
+            <li><a href="https://maps.google.com/?cid=1822318887932121214&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank"><i class="fa-solid fa-location-dot"></i> Bodega La Conveniente</a><span>Ambiente único y música en directo.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  function toggleMenu() { document.getElementById("nav-links").classList.toggle("active"); }
-</script>
+  <div style="text-align: center; padding: 40px 0;"><a href="index.html" class="btn-back">← Volver a la Invitación</a></div>
+  <footer>
+    <p>© 2026 Claudia & Alberto · Hecho con ❤️</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
 </body>
+
 </html>
