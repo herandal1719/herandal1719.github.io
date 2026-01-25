@@ -227,6 +227,25 @@
       border-top: 1px solid #eee;
       margin-top: 40px;
     }
+
+    /* Style for the map image */
+    .map-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .map-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-caption {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      color: var(--gris);
+    }
   </style>
 </head>
 
@@ -302,36 +321,43 @@
   </section>
 
   <section id="alloggio" style="background: white;">
-  <h2>Dove alloggiare a Santander</h2>
-  <p class="intro-text">
-    Santander offre diverse zone ideali dove soggiornare, a seconda di ciò che cercate: mare, centro città o tranquillità.
-    Di seguito vi lasciamo alcune raccomandazioni per orientarvi al meglio.
-    In ogni caso, <strong>scriveteci pure senza alcun problema</strong> se desiderate un consiglio più personalizzato.
-  </p>
+    <h2>Dove alloggiare a Santander</h2>
+    <p class="intro-text">
+      Santander offre diverse zone ideali dove soggiornare, a seconda di ciò che cercate: mare, centro città o tranquillità.
+      Di seguito vi lasciamo alcune raccomandazioni per orientarvi al meglio.
+      In ogni caso, <strong>scriveteci pure senza alcun problema</strong> se desiderate un consiglio più personalizzato.
+    </p>
 
-  <div class="grid-turismo">
-    <div class="card-turismo">
-      <div class="info-turismo">
-        <i class="fa-solid fa-city" style="color:var(--dorado); font-size:1.5rem;"></i>
-        <h4>Centro città</h4>
-        <p style="font-size:0.9rem;">
-          Ideale se preferite muovervi a piedi, essere vicini a ristoranti, bar e negozi,
-          e vivere l’atmosfera più autentica della città.
-        </p>
+    <div class="grid-turismo">
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-city" style="color:var(--dorado); font-size:1.5rem;"></i>
+          <h4>Centro città</h4>
+          <p style="font-size:0.9rem;">
+            Ideale se preferite muovervi a piedi, essere vicini a ristoranti, bar e negozi,
+            e vivere l’atmosfera più autentica della città.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-turismo">
+        <div class="info-turismo">
+          <i class="fa-solid fa-umbrella-beach" style="color:var(--dorado); font-size:1.5rem;"></i>
+          <h4>El Sardinero</h4>
+          <p style="font-size:0.9rem;">
+            Zona elegante e rilassante, perfetta per chi desidera soggiornare vicino al mare,
+            con spiagge iconiche e splendide passeggiate.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="card-turismo">
-      <div class="info-turismo">
-        <i class="fa-solid fa-umbrella-beach" style="color:var(--dorado); font-size:1.5rem;"></i>
-        <h4>El Sardinero</h4>
-        <p style="font-size:0.9rem;">
-          Zona elegante e rilassante, perfetta per chi desidera soggiornare vicino al mare,
-          con spiagge iconiche e splendide passeggiate.
-        </p>
-      </div>
+    <div class="map-container">
+      <img src="santander.png" alt="Zone consigliate per l'alloggio">
+      <p class="map-caption">Abbiamo evidenziato in grigio le zone migliori dove cercare alloggio.</p>
     </div>
-</section>
+  </section>
+
   <section id="gastronomia">
     <h2>Dove mangiare a Santander</h2>
     <div class="grid-turismo">
