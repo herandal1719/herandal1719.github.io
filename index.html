@@ -349,7 +349,7 @@ const translations = {
   es: { 
     nav_inicio: "Inicio", nav_planning: "Planning", nav_regalo: "Regalo", nav_asistencia: "¿Nos acompañas?", nav_info: "Información", nav_ubicacion: "Ubicación",
     nos_casamos: "¡Nos casamos!", planning_titulo: "Planning", 
-    preboda: "Preboda", preboda_loc: "Hora y lugar por definir",
+    preboda: "Preboda", preboda_loc: "<strong>Lugar:</strong> Santa Fe <strong>Hora:</strong> A partir de las 20.00",
     bus_ida: "Bus desde Santander", bus_loc: "Parada Ferry",
     ceremonia: "Ceremonia", ceremonia_loc: "Restaurante El Nuevo Molino, Puente Arce",
     cocktail: "Cóctel de bienvenida", banquete: "Banquete nupcial", baile: "Baile y barra libre", bus_vuelta: "Bus de vuelta",
@@ -362,7 +362,7 @@ const translations = {
   it: { 
     nav_inicio: "Inizio", nav_planning: "Programma", nav_regalo: "Regalo", nav_asistencia: "RSVP", nav_info: "Info", nav_ubicacion: "Ubicazione",
     nos_casamos: "Ci sposiamo!", planning_titulo: "Programma", 
-    preboda: "Festa pre-matrimonio", preboda_loc: "Ora e luogo da definire",
+    preboda: "Festa pre-matrimonio", preboda_loc: "<strong>Luogo:</strong> Santa Fe <strong>Ora:</strong> A partire dalle 20:00",
     bus_ida: "Navetta da Santander", bus_loc: "Fermata Ferry",
     ceremonia: "Cerimonia", ceremonia_loc: "Restaurante El Nuevo Molino, Puente Arce",
     cocktail: "Aperitivo", banquete: "Banchetto", baile: "Festa", bus_vuelta: "Navetta di ritorno",
@@ -380,7 +380,7 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang][key]) {
-        if (key === 'bienvenida_texto') {
+        if (key === 'bienvenida_texto' || key === 'preboda_loc') {
             el.innerHTML = translations[lang][key];
         } else {
             el.textContent = translations[lang][key];
@@ -414,5 +414,3 @@ updateCountdown();
 </script>
 </body>
 </html>
-
-
